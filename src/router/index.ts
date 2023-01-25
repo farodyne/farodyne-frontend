@@ -3,26 +3,32 @@
  *
  * The declaration of our routes.
  */
-import { createRouter, createWebHistory } from 'vue-router';
-import { Route, Routes } from '@/types';
-// import { routes } from '@/constants';
-import { home } from '@/views';
 import { h } from 'vue';
-import { RouterView } from 'vue-router';
+import { createRouter, createWebHistory, RouterView } from 'vue-router';
+import { Routes } from '@/types';
+import { Album, Home, Section } from '@/views';
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         // If no route is specified, default to the "home" route.
-        // new Route('').forward(Routes.Home)
-        { path: '/home', component: home }
+        { path: '', redirect: `/${Routes.Home}` },
+
         // Let the "home" component render the view for the "home" route.
-        // new Route(`/${routes.home}`, home),
+        { path: `/${Routes.Home}`, component: Home },
+
         // For any other route that is not "home", it's either a section or
         // an album in the particular section. This rule is required to ensure
         // the correct router link in the navbar is highlighted as selected by
         // the applied active CSS class in the Vue Router.
-        // new Route('/:section', { render: () => h(RouterView) }, [new Route('', section), new Route(':id', album)])
+        {
+            path: '/:section',
+            component: { render: () => h(RouterView) },
+            children: [
+                { path: '', component: Section },
+                { path: ':id', component: Album }
+            ]
+        }
     ]
 });
 

@@ -1,3 +1,10 @@
-import home from './home.vue';
+/**
+ * Author: Federico Engler
+ *
+ * Aggregate export file for views.
+ */
+import Album from './album.vue';
+import Home from './home.vue';
+import Section from './section.vue';
 
-export { home };
+export { Album, Home, Section };
