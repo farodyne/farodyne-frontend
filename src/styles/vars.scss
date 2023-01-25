@@ -8,11 +8,13 @@ $dark-shadow-color: #111;
 $navlink-color: #7ba4c6;
 $navlink-active-color: #d7e6f1;
 $navlink-hover-color: #a6c4db;
+$logo-color: #c5c5c5;
 
 // Durations.
 $navbar-transition-duration: 0.4s;
 
 // Font families.
+$logo-font: 'Hurricane', cursive;
 $main-font: 'Oswald', sans-serif;
 
 // Font sizes.
@@ -20,6 +22,7 @@ $navbar-font-size: 2.6rem;
 $navbar-link-padding: 2.4rem;
 
 // Misc sizes.
+$content-top-margin: 8rem;
 $navbar-height: 6rem;
 
 // Mixins.

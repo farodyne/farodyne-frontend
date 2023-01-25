@@ -22,4 +22,20 @@
     body {
         background: $body-background-color;
     }
+
+    h1 {
+        color: $logo-color;
+        font-family: $logo-font;
+        font-size: 5rem;
+        font-weight: 100;
+        margin: $content-top-margin 0 0.6rem 0;
+        text-align: center;
+
+        /**
+        @media @mobile-tight {
+            font-size: 4rem;
+            margin-top: calc(@content-top-margin - 1rem);
+        }
+         */
+    }
 </style>
