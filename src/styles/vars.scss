@@ -1,13 +1,34 @@
 // Border widths.
 $border-width-xs: 1px;
-$navlink-color: #7ba4c6;
 
 // Colors.
 $body-background-color: #45454d;
 $carousel-border-color: #909090;
+$dark-shadow-color: #111;
+$navlink-color: #7ba4c6;
+$navlink-active-color: #d7e6f1;
+$navlink-hover-color: #a6c4db;
+
+// Durations.
+$navbar-transition-duration: 0.4s;
 
 // Font families.
 $main-font: 'Oswald', sans-serif;
 
 // Font sizes.
 $navbar-font-size: 2.6rem;
+$navbar-link-padding: 2.4rem;
+
+// Misc sizes.
+$navbar-height: 6rem;
+
+// Mixins.
+@mixin blurry-text-shadow($color) {
+    text-shadow: 0 0 5px $color, 0 0 20px $color;
+}
+
+@mixin box-shadow($arguments) {
+    -webkit-box-shadow: $arguments;
+    -moz-box-shadow: $arguments;
+    box-shadow: $arguments;
+}

@@ -28,19 +28,38 @@
         border-bottom: $border-width-xs solid $carousel-border-color;
         display: flex;
         font-size: $navbar-font-size;
-        height: 6rem;
+        font-weight: 500;
+        height: $navbar-height;
         justify-content: center;
         position: fixed;
         text-transform: uppercase;
+        top: 0;
         width: 100%;
         z-index: 10;
 
+        filter: brightness(0.86);
+        @include box-shadow(0 0 1rem 0 $dark-shadow-color);
+
         a {
             color: $navlink-color;
-            display: flex;
             font-family: $main-font;
-            padding: 0 2.4rem;
+            padding: 0 $navbar-link-padding;
             text-decoration: none;
+            transition-duration: $navbar-transition-duration;
+
+            &:hover {
+                color: $navlink-hover-color;
+                @include blurry-text-shadow($navlink-color);
+            }
+
+            &:active {
+                color: $navlink-active-color;
+            }
+        }
+
+        .router-link-active {
+            color: $navlink-active-color;
+            @include blurry-text-shadow($navlink-color);
         }
     }
 </style>
