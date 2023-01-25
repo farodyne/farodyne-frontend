@@ -11,11 +11,11 @@
 
     @Component({ name: 'fd-album-thumbnail' })
     export default class Navbar extends Vue {
+        /**
+         * The parameters for this component are:
+         * @param {Object} album - An album thumbnail object.
+         */
         @Prop album!: Album;
-
-        created() {
-            console.log('Album', this.album);
-        }
     }
 </script>
 
@@ -43,7 +43,7 @@
         border: 1px solid $thumbnail-border-color;
         border-radius: 10px;
         overflow: hidden;
-        transition-duration: 0.3s;
+        transition-duration: $thumbnail-transition-duration;
 
         @include box-shadow(0 0 2rem 0 $dark-shadow-color);
         .caption {
@@ -60,8 +60,9 @@
 
         img {
             height: 90px;
-            transition-duration: 0.25s;
+            transition-duration: $thumbnail-transition-duration;
             width: 220px;
+
             &:hover {
                 transform: scale(1.05);
             }

@@ -56,9 +56,9 @@
         z-index: -1;
         top: $navbar-height;
 
-        //@media @mobile {
+        // @media @mobile {
         //    top: 5rem;
-        //}
+        // }
 
         .gradient {
             background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), $body-background-color);
@@ -72,22 +72,20 @@
             filter: grayscale(0.35);
             width: 100%;
         }
+    }
 
-        .section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin: calc($content-top-margin + 1rem) auto 0 auto;
-            max-width: $desktop-width;
+    .section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: calc($content-top-margin + 1rem) auto 0 auto;
+        max-width: $desktop-width;
 
-            .thumbnail-container {
-                display: flex;
-                margin: 1rem;
-
-                // @media @mobile {
-                //    margin: 1rem;
-                // }
-            }
+        .thumbnail-container {
+            margin: 1rem;
+            //@media @mobile {
+            //    margin: 1rem;
+            // }
         }
     }
 </style>
