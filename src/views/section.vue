@@ -5,12 +5,12 @@
      * The component that implements the navigation bar in our application.
      */
     import { Component, Vue } from 'vue-facing-decorator';
-    import { Album } from '@/types';
+    import { Section } from '@/types';
     import { BackendApi, settings } from '@/utils';
 
     @Component
     export default class Navbar extends Vue {
-        section: Array<Album> = [];
+        section?: Section;
 
         async created() {
             const type = this.$route.path.substring(1);
@@ -35,6 +35,13 @@
         <div class="backdrop">
             <img :src="backdropUrl" />
             <div class="gradient"></div>
+        </div>
+
+        <!-- Render the section thumbnails. -->
+        <div v-if="section" class="section">
+            <div class="thumbnail-container" v-for="album in section.albums" :key="album.id">
+                <fd-album-thumbnail :album="album" />
+            </div>
         </div>
     </div>
 </template>

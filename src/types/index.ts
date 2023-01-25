@@ -20,4 +20,9 @@ export interface Album {
     url: string;
 }
 
+// The type of a section.
+export interface Section {
+    albums: Array<Album>;
+}
+
 export * from './route';
