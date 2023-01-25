@@ -72,5 +72,22 @@
             filter: grayscale(0.35);
             width: 100%;
         }
+
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: calc($content-top-margin + 1rem) auto 0 auto;
+            max-width: $desktop-width;
+
+            .thumbnail-container {
+                display: flex;
+                margin: 1rem;
+
+                // @media @mobile {
+                //    margin: 1rem;
+                // }
+            }
+        }
     }
 </style>
