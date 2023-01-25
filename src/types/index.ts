@@ -9,3 +9,5 @@ export enum Routes {
     Misc = 'misc',
     Trips = 'trips'
 }
+
+export * from './route';

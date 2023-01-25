@@ -4,9 +4,9 @@
  * The declaration of our routes.
  */
 import { createRouter, createWebHistory } from 'vue-router';
-// import { Route } from '@/models';
+import { Route, Routes } from '@/types';
 // import { routes } from '@/constants';
-// import { album, home, section } from '@/views';
+import { home } from '@/views';
 import { h } from 'vue';
 import { RouterView } from 'vue-router';
 
@@ -14,7 +14,8 @@ const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         // If no route is specified, default to the "home" route.
-        // new Route('').forward(routes.home),
+        // new Route('').forward(Routes.Home)
+        { path: '/home', component: home }
         // Let the "home" component render the view for the "home" route.
         // new Route(`/${routes.home}`, home),
         // For any other route that is not "home", it's either a section or

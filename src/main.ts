@@ -7,7 +7,6 @@ import { createApp } from 'vue';
 import * as components from '@/components';
 import app from './app.vue';
 import router from './router';
-import './style.css';
 
 const application = createApp(app);
 
