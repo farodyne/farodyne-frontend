@@ -12,6 +12,7 @@
         </a>
     </div>
     <HelloWorld msg="Vite + Vue" />
+    <fd-navbar />
 </template>
 
 <style scoped>

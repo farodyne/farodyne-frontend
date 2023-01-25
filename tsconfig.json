@@ -1,23 +1,23 @@
 {
-  "compilerOptions": {
-      "allowJs": true,
-      "declaration": true,
-      "downlevelIteration": true,
-      "esModuleInterop": true,
-      "isolatedModules": true,
-      "lib": ["esnext", "dom"],
-      "moduleResolution": "node",
-      "resolveJsonModule": true,
-      "skipLibCheck": true,
-      "strict": true,
-      "rootDirs": ["./src", "./tests"],
-      "outDir": "lib",
-      "module": "esnext",
-      "target": "esnext",
-      "jsx": "preserve",
-      "experimentalDecorators": true,
-      "paths": { "@/*": ["./src/*"] }
-  },
-  "exclude": ["./node_modules"],
-  "include": ["src/**/*", "./tests/**/*"]
+    "compilerOptions": {
+        "allowJs": true,
+        "declaration": true,
+        "downlevelIteration": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "lib": ["esnext", "dom"],
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "rootDirs": ["./src", "./tests"],
+        "outDir": "lib",
+        "module": "esnext",
+        "target": "esnext",
+        "jsx": "preserve",
+        "experimentalDecorators": true,
+        "paths": { "@/*": ["./src/*"] }
+    },
+    "exclude": ["./node_modules"],
+    "include": ["src/**/*"]
 }
