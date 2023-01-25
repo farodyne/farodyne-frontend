@@ -13,6 +13,10 @@
         border: 0;
         margin: 0;
         padding: 0;
+
+        // As we are using rem as unit for font sizes, set the base font size to default size
+        // 10px to make out rem calculations easier.
+        font-size: 62.5%;
     }
 
     body {
