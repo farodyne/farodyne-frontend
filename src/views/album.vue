@@ -6,7 +6,7 @@
      */
     import { Component, Vue } from 'vue-facing-decorator';
 
-    @Component({ name: 'fd-album' })
+    @Component
     export default class Navbar extends Vue {
         created() {
             console.log('In Album!');
