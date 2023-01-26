@@ -160,8 +160,8 @@
             left: 0;
 
             img {
-                border-bottom: 1px solid $carousel-border-color;
-                border-top: 1px solid $carousel-border-color;
+                border-bottom: $border-width-xs solid $carousel-border-color;
+                border-top: $border-width-xs solid $carousel-border-color;
                 transition: all 3s ease-in-out;
             }
 
@@ -178,7 +178,7 @@
     .copyright {
         color: $caption-color;
         font-family: $caption-font;
-        font-size: 1.1rem;
+        font-size: $copyright-font-size;
         padding-top: 0.6rem;
         text-align: center;
     }
