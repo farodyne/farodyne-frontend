@@ -4,6 +4,8 @@
  * Type definitions for the types in our application.
  */
 
+import { AlbumImage } from './album-image';
+
 // The routes in our application.
 export enum Routes {
     Fantasy = 'fantasy',
@@ -12,14 +14,8 @@ export enum Routes {
     Trips = 'trips'
 }
 
-// The type of an image.
-export interface Image {
-    url: string;
-    caption: string;
-}
-
 // The type of a video.
-export interface Video {
+export interface AlbumVideo {
     url: string;
     caption: string;
 }
@@ -31,8 +27,8 @@ export interface Album {
     caption: string;
     url: string;
     width?: number;
-    images?: Array<Image>;
-    videos?: Array<Video>;
+    images?: Array<AlbumImage>;
+    videos?: Array<AlbumVideo>;
 }
 
 // The type of a section.
@@ -40,4 +36,5 @@ export interface Section {
     albums: Array<Album>;
 }
 
+export * from './album-image';
 export * from './route';

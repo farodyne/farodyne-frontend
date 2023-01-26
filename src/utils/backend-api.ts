@@ -35,6 +35,15 @@ export class BackendApi {
     }
 
     /**
+     * Method to fetch the frontpage carousel images from backend.
+     * @returns An array of frontpage carousel images.
+     */
+    async getFrontpageImages() {
+        const { data } = await axios.get(`${this.baseUrl}/albums/carousel-images`, this.options);
+        return data;
+    }
+
+    /**
      * Method to fetch the newest, latest albums.
      * @returns An array with the latest albumbs.
      */
