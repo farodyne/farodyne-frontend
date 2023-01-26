@@ -61,11 +61,13 @@
          * Method that makes the currently indexed carousel image visible.
          */
         showCarouselImage(index: number) {
-            this.images.forEach((image) => {
-                image.hide();
+            this.images.forEach((image, i) => {
+                if (index !== i) {
+                    image.hide();
+                } else {
+                    image.show();
+                }
             });
-
-            this.images[index].show();
         }
 
         /**
