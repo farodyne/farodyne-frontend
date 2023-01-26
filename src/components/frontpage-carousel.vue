@@ -36,25 +36,35 @@
         }
 
         /**
+         * Starts the image carousel.
+         */
+        startCarousel(index = 0) {
+            this.clearInterval();
+            this.showCarouselImage(index);
+
+            // Start the carousel.
+            this.interval = setInterval(() => {
+                index = (index + 1) % this.images.length;
+                this.showCarouselImage(index);
+            }, settings.frontpageImageDisolveDelay);
+        }
+
+        /**
          * Preload the carousel images.
          */
-        async preloadImages(images: Array<AlbumImage>) {
-            let image: AlbumImage | undefined;
+        preloadImages(images: Array<AlbumImage>) {
+            images.forEach(async (image) => {
+                const loadedImage = (await Utils.loadImage(image)) as AlbumImage;
 
-            if (images && images.length > 0) {
-                try {
-                    image = images.shift();
-                    if (image) {
-                        this.images.push((await Utils.loadImage(image)) as AlbumImage);
+                if (loadedImage) {
+                    this.images.push(loadedImage);
+
+                    // When we have an image loaded, start the carousel.
+                    if (this.images.length === 1) {
+                        this.startCarousel();
                     }
-                } catch (error) {
-                    if (image) {
-                        console.warn('Failed to load image:', image.url);
-                    }
-                } finally {
-                    this.preloadImages(images);
                 }
-            }
+            });
         }
 
         /**
@@ -71,32 +81,12 @@
         }
 
         /**
-         * Starts the image carousel.
-         */
-        startCarousel(index = 0) {
-            this.clearInterval();
-            this.showCarouselImage(index);
-
-            // Start the carousel.
-            this.interval = setInterval(() => {
-                index = (index + 1) % this.images.length;
-                this.showCarouselImage(index);
-            }, settings.frontpageImageDisolveDelay);
-        }
-
-        /**
-         * Method that fetches the list of frontpage images and at random selects
-         * a subset of them to load and display in this carousel component.
+         * Loads the frontpage images and starts the carousel.
          */
         async loadCarouselImages() {
             try {
                 const album = await new BackendApi().getFrontpageImages();
-                const images = album.images.sort(() => 0.5 - Math.random());
-                const subset = images.slice(0, settings.numberOfFrontpageImages);
-                await this.preloadImages(subset);
-
-                // Start the carousel as soon as the first image is loaded.
-                this.startCarousel();
+                await this.preloadImages(album);
             } catch (error) {
                 console.error('Failed to get frontpage images from server.');
             }
@@ -132,7 +122,6 @@
     @import '@/styles/vars.scss';
 
     .carousel-container {
-        display: block;
         height: auto;
         margin-top: 4rem;
         position: relative;

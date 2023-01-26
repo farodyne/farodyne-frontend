@@ -40,7 +40,9 @@ export class BackendApi {
      */
     async getFrontpageImages() {
         const { data } = await axios.get(`${this.baseUrl}/albums/carousel-images`, this.options);
-        return data;
+        const images = data.images.sort(() => 0.5 - Math.random());
+        const subset = images.slice(0, settings.numberOfFrontpageImages);
+        return subset;
     }
 
     /**
