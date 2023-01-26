@@ -35,6 +35,15 @@ export class BackendApi {
     }
 
     /**
+     * Method to fetch the newest, latest albums.
+     * @returns An array with the latest albumbs.
+     */
+    async getNews(count: number) {
+        const { data } = await axios.get(`${this.baseUrl}/news/${count}`, this.options);
+        return data;
+    }
+
+    /**
      * Method to fetch all the albums belonging to a particular category/section.
      * @param {string} type - The tye of albums to fetch.
      * @returns An array of photo albums.

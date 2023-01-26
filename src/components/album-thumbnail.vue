@@ -10,7 +10,7 @@
     import type { Album } from '@/types';
 
     @Component({ name: 'fd-album-thumbnail' })
-    export default class Navbar extends Vue {
+    export default class AlbumThumbnail extends Vue {
         /**
          * The parameters for this component are:
          * @param {Album} album - An album description object.
