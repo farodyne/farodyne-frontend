@@ -12,12 +12,27 @@ export enum Routes {
     Trips = 'trips'
 }
 
+// The type of an image.
+export interface Image {
+    url: string;
+    caption: string;
+}
+
+// The type of a video.
+export interface Video {
+    url: string;
+    caption: string;
+}
+
 // The type of an album.
 export interface Album {
     id: string;
     type: string;
     caption: string;
     url: string;
+    width?: number;
+    images?: Array<Image>;
+    videos?: Array<Video>;
 }
 
 // The type of a section.

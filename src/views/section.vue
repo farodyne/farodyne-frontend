@@ -56,10 +56,6 @@
         z-index: -1;
         top: $navbar-height;
 
-        // @media @mobile {
-        //    top: 5rem;
-        // }
-
         .gradient {
             background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), $body-background-color);
             position: absolute;
@@ -83,9 +79,6 @@
 
         .thumbnail-container {
             margin: 1rem;
-            //@media @mobile {
-            //    margin: 1rem;
-            // }
         }
     }
 </style>
