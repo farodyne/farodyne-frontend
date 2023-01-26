@@ -13,7 +13,7 @@
     export default class Navbar extends Vue {
         /**
          * The parameters for this component are:
-         * @param {Object} album - An album thumbnail object.
+         * @param {Album} album - An album description object.
          */
         @Prop album!: Album;
     }
@@ -40,8 +40,8 @@
 
     .thumbnail-container {
         background-color: $thumbnail-background-color;
-        border: 1px solid $thumbnail-border-color;
-        border-radius: 10px;
+        border: $border-width-xs solid $thumbnail-border-color;
+        border-radius: $border-radius;
         overflow: hidden;
         transition-duration: $thumbnail-transition-duration;
 
@@ -49,8 +49,8 @@
         .caption {
             color: $thumbnail-color;
             font-family: $thumbnail-font;
-            font-size: 1.2rem;
-            padding: 3px 0 4px 0;
+            font-size: $thumbnail-font-size;
+            padding: 4px 0;
             text-align: center;
         }
 
