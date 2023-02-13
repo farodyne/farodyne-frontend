@@ -67,7 +67,7 @@
 
             img {
                 width: 100%;
-                @include box-shadow(0 0 2.4rem 0 $dark-shadow-color);
+                @include box-shadow(0 0 2.4rem 0 $shadow-color);
             }
         }
 
@@ -86,7 +86,7 @@
 
         .caption {
             color: $secondary-foreground-color;
-            font-size: $image-caption-font-size;
+            font-size: $font-size-sm;
             text-align: center;
         }
     }

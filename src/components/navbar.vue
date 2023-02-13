@@ -22,16 +22,14 @@
 <style lang="scss" scoped>
     @import '@/styles/vars.scss';
 
-    $navlink-color: #7ba4c6;
-    $navlink-active-color: #d7e6f1;
-    $navlink-hover-color: #a6c4db;
+    $navbar-link-padding: 2.4rem;
 
     nav {
         align-items: center;
         background-color: $primary-background-color;
-        border-bottom: $border-width-xs solid $carousel-border-color;
+        border-bottom: $border-width-xs solid $primary-border-color;
         display: flex;
-        font-size: $navbar-font-size;
+        font-size: $font-size-md;
         font-weight: 500;
         height: $navbar-height;
         justify-content: center;
@@ -42,13 +40,13 @@
         z-index: 10;
 
         filter: brightness(0.86);
-        @include box-shadow(0 0 1rem 0 $dark-shadow-color);
+        @include box-shadow(0 0 1rem 0 $shadow-color);
 
         a {
             color: $navlink-color;
             padding: 0 $navbar-link-padding;
             text-decoration: none;
-            transition-duration: $navbar-transition-duration;
+            transition-duration: $transition-duration;
 
             &:hover {
                 color: $navlink-hover-color;

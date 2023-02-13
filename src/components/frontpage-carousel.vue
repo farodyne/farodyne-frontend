@@ -128,7 +128,7 @@
         padding: 0;
         width: 100%;
 
-        @include box-shadow(0px 0px 40px 0px $dark-shadow-color);
+        @include box-shadow(0px 0px 40px 0px $shadow-color);
 
         img {
             width: 100%;
@@ -159,8 +159,8 @@
             left: 0;
 
             img {
-                border-bottom: $border-width-xs solid $carousel-border-color;
-                border-top: $border-width-xs solid $carousel-border-color;
+                border-bottom: $border-width-xs solid $primary-border-color;
+                border-top: $border-width-xs solid $primary-border-color;
                 transition: all 3s ease-in-out;
             }
 
@@ -175,7 +175,7 @@
     }
 
     .copyright {
-        font-size: $copyright-font-size;
+        font-size: $font-size-xs;
         padding-top: 0.6rem;
         text-align: center;
     }

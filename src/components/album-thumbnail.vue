@@ -38,18 +38,22 @@
 <style lang="scss" scoped>
     @import '@/styles/vars.scss';
 
+    $thumbnail-color: #b0b0b0;
+    $thumbnail-background-color: #111;
+    $thumbnail-border-color: #666;
+
     .thumbnail-container {
         background-color: $thumbnail-background-color;
         border: $border-width-xs solid $thumbnail-border-color;
         border-radius: $border-radius;
         overflow: hidden;
-        transition-duration: $thumbnail-transition-duration;
+        transition-duration: $transition-duration;
 
-        @include box-shadow(0 0 2rem 0 $dark-shadow-color);
+        @include box-shadow(0 0 2rem 0 $shadow-color);
         .caption {
             color: $thumbnail-color;
-            font-family: $thumbnail-font;
-            font-size: $thumbnail-font-size;
+            font-family: $secondary-font;
+            font-size: $font-size-xs;
             padding: 4px 0;
             text-align: center;
         }
@@ -60,7 +64,7 @@
 
         img {
             height: 90px;
-            transition-duration: $thumbnail-transition-duration;
+            transition-duration: $transition-duration;
             width: 220px;
 
             &:hover {

@@ -4,33 +4,27 @@ $border-width-xs: 1px;
 
 // Colors.
 $primary-background-color: #45454d;
+$primary-border-color: #909090;
 $primary-foreground-color: #c5c5c5;
 $secondary-foreground-color: #bbb;
-
-$carousel-border-color: #909090;
-$dark-shadow-color: #111;
+$shadow-color: #111;
 $navlink-color: #7ba4c6;
 $navlink-active-color: #d7e6f1;
 $navlink-hover-color: #a6c4db;
-$thumbnail-color: #a0a0a0;
-$thumbnail-background-color: #111;
-$thumbnail-border-color: #666;
 
 // Durations.
-$navbar-transition-duration: 0.4s;
-$thumbnail-transition-duration: 0.4s;
+$transition-duration: 0.4s;
 
 // Font families.
 $primary-font: 'Oswald', sans-serif;
+$secondary-font: 'Roboto', sans-serif;
 $logo-font: 'Hurricane', cursive;
-$thumbnail-font: 'Roboto', sans-serif;
 
 // Font sizes.
-$copyright-font-size: 1.2rem;
-$image-caption-font-size: 1.6rem;
-$navbar-font-size: 2.6rem;
-$news-font-size: 4rem;
-$thumbnail-font-size: 1.2rem;
+$font-size-xs: 1.2rem;
+$font-size-sm: 1.6rem;
+$font-size-md: 2.6rem;
+$font-size-lg: 4rem;
 
 // Misc sizes.
 $content-top-margin: 8rem;
@@ -38,7 +32,6 @@ $navbar-height: 6rem;
 $desktop-width: 1100px;
 $max-news-width: 800px;
 $max-album-width: 1275px;
-$navbar-link-padding: 2.4rem;
 
 // Media query stuff.
 $mobile-breakpoint: 600px;

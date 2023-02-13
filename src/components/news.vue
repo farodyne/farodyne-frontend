@@ -47,7 +47,7 @@
         h2 {
             color: $secondary-foreground-color;
             font-family: $logo-font;
-            font-size: $news-font-size;
+            font-size: $font-size-lg;
             font-weight: 100;
             margin: 2rem 0 1rem 0;
         }
