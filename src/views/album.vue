@@ -86,7 +86,6 @@
 
         .caption {
             color: $caption-color;
-            font-family: $caption-font;
             font-size: $image-caption-font-size;
             text-align: center;
         }

@@ -21,9 +21,8 @@ $navbar-transition-duration: 0.4s;
 $thumbnail-transition-duration: 0.4s;
 
 // Font families.
-$caption-font: 'Oswald', sans-serif;
+$primary-font: 'Oswald', sans-serif;
 $logo-font: 'Hurricane', cursive;
-$main-font: 'Oswald', sans-serif;
 $thumbnail-font: 'Roboto', sans-serif;
 
 // Font sizes.
@@ -40,6 +39,10 @@ $desktop-width: 1100px;
 $max-news-width: 800px;
 $max-album-width: 1275px;
 $navbar-link-padding: 2.4rem;
+
+// Media query stuff.
+$mobile-breakpoint: 600px;
+$mobile: 'screen and (max-width: #{$mobile-breakpoint})';
 
 // Mixins.
 @mixin blurry-text-shadow($color) {

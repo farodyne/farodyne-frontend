@@ -136,7 +136,6 @@
 
         .captions {
             color: $caption-color;
-            font-family: $caption-font;
             font-size: 1.4rem;
             position: absolute;
             width: 100%;
@@ -177,7 +176,6 @@
 
     .copyright {
         color: $caption-color;
-        font-family: $caption-font;
         font-size: $copyright-font-size;
         padding-top: 0.6rem;
         text-align: center;

@@ -21,6 +21,7 @@
 
     body {
         background: $body-background-color;
+        font-family: $primary-font;
     }
 
     h1 {

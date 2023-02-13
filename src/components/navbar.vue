@@ -42,7 +42,6 @@
 
         a {
             color: $navlink-color;
-            font-family: $main-font;
             padding: 0 $navbar-link-padding;
             text-decoration: none;
             transition-duration: $navbar-transition-duration;
