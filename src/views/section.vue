@@ -39,7 +39,7 @@
 
         <!-- Render the section thumbnails. -->
         <div v-if="section" class="section">
-            <div class="thumbnail-container" v-for="album in section.albums" :key="album.id">
+            <div v-for="album in section.albums" :key="album.id">
                 <fd-album-thumbnail :album="album" />
             </div>
         </div>
@@ -52,9 +52,9 @@
     .backdrop {
         opacity: 0.35;
         position: fixed;
+        top: $navbar-height;
         width: 100%;
         z-index: -1;
-        top: $navbar-height;
 
         .gradient {
             background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), $primary-background-color);
@@ -76,9 +76,5 @@
         justify-content: space-around;
         margin: calc($content-top-margin + 1rem) auto 0 auto;
         max-width: $desktop-width;
-
-        .thumbnail-container {
-            margin: 1rem;
-        }
     }
 </style>

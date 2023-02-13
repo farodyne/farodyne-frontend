@@ -46,10 +46,12 @@
         background-color: $thumbnail-background-color;
         border: $border-width-xs solid $thumbnail-border-color;
         border-radius: $border-radius;
+        margin: 2.4rem;
         overflow: hidden;
         transition-duration: $transition-duration;
 
         @include box-shadow(0 0 2rem 0 $shadow-color);
+
         .caption {
             color: $thumbnail-color;
             font-family: $secondary-font;

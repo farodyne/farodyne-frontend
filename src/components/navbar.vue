@@ -42,6 +42,10 @@
         filter: brightness(0.86);
         @include box-shadow(0 0 1rem 0 $shadow-color);
 
+        @media #{$mobile-tight} {
+            font-size: 2.2rem;
+        }
+
         a {
             color: $navlink-color;
             padding: 0 $navbar-link-padding;

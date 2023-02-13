@@ -12,7 +12,7 @@
     @Component({ name: 'fd-news' })
     export default class News extends Vue {
         // The array of albums to work on.
-        news?: Array<Album>;
+        news!: Array<Album>;
 
         // Component creation hook.
         async created() {
@@ -26,10 +26,10 @@
 </script>
 
 <template>
-    <div class="news">
+    <div class="news-container">
         <h2>Latest albums</h2>
         <div class="thumbnails">
-            <div class="thumbnail-container" v-for="album in news" :key="album.id">
+            <div v-for="album in news" :key="album.id">
                 <fd-album-thumbnail :album="album" />
             </div>
         </div>
@@ -39,8 +39,8 @@
 <style lang="scss" scoped>
     @import '@/styles/vars.scss';
 
-    .news {
-        margin: 0 auto;
+    .news-container {
+        margin: 2rem auto 0 auto;
         max-width: $max-news-width;
         text-align: center;
 
@@ -49,7 +49,7 @@
             font-family: $logo-font;
             font-size: $font-size-lg;
             font-weight: 100;
-            margin: 2rem 0 1rem 0;
+            margin: 0;
         }
 
         .thumbnails {
