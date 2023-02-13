@@ -15,7 +15,7 @@ RUN npm install --no-optional
 COPY .env .
 COPY src src
 COPY public public
-COPY index.html vite.config.ts ./
+COPY index.html vite.config.ts tsconfig.json ./
 
 # Run the production build.
 RUN npm run build
