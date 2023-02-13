@@ -135,7 +135,7 @@
         }
 
         .captions {
-            color: $caption-color;
+            color: $secondary-foreground-color;
             font-size: 1.4rem;
             position: absolute;
             width: 100%;
@@ -175,7 +175,6 @@
     }
 
     .copyright {
-        color: $caption-color;
         font-size: $copyright-font-size;
         padding-top: 0.6rem;
         text-align: center;

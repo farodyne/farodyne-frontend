@@ -57,7 +57,7 @@
         top: $navbar-height;
 
         .gradient {
-            background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), $body-background-color);
+            background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), $primary-background-color);
             position: absolute;
             height: 50%;
             bottom: 0;

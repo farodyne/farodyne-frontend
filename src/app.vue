@@ -20,12 +20,12 @@
     }
 
     body {
-        background: $body-background-color;
+        color: $primary-foreground-color;
+        background: $primary-background-color;
         font-family: $primary-font;
     }
 
     h1 {
-        color: $logo-color;
         font-family: $logo-font;
         font-size: 5rem;
         font-weight: 100;

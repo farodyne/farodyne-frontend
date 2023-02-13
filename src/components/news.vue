@@ -45,7 +45,7 @@
         text-align: center;
 
         h2 {
-            color: $news-color;
+            color: $secondary-foreground-color;
             font-family: $logo-font;
             font-size: $news-font-size;
             font-weight: 100;

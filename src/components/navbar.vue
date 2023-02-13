@@ -22,9 +22,13 @@
 <style lang="scss" scoped>
     @import '@/styles/vars.scss';
 
+    $navlink-color: #7ba4c6;
+    $navlink-active-color: #d7e6f1;
+    $navlink-hover-color: #a6c4db;
+
     nav {
         align-items: center;
-        background-color: $body-background-color;
+        background-color: $primary-background-color;
         border-bottom: $border-width-xs solid $carousel-border-color;
         display: flex;
         font-size: $navbar-font-size;
