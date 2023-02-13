@@ -1,7 +1,7 @@
 /**
  * Author: Federico Engler
  *
- * Type definitions for the types in our application.
+ * Type definitions for the types in my homepage application.
  */
 
 import { AlbumImage } from './album-image';
@@ -14,13 +14,13 @@ export enum Routes {
     Trips = 'trips'
 }
 
-// The type of a video.
+// The type of a video resource.
 export interface AlbumVideo {
     url: string;
     caption: string;
 }
 
-// The type of an album.
+// The type of an album resource.
 export interface Album {
     id: string;
     type: string;
@@ -37,4 +37,3 @@ export interface Section {
 }
 
 export * from './album-image';
-export * from './route';

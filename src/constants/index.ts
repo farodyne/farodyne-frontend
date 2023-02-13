@@ -1,7 +1,7 @@
 /**
  * Author: Federico Engler
  *
- * Constant definitions for common constans in our application.
+ * Constant definitions for common constans in the application.
  */
 import { Routes } from '@/types';
 

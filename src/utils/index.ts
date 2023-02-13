@@ -1,7 +1,7 @@
 /**
  * Author: Federico Engler
  *
- * Aggregate export file for utils.
+ * Aggregate export file for the utility classes.
  */
 export * from './backend-api';
 export * from './settings';
