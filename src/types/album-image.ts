@@ -1,7 +1,7 @@
 /**
  * Author: Federico Engler
  *
- * Our model for representing an album image.
+ * The data model for representing an album image.
  */
 export class AlbumImage {
     url: string;

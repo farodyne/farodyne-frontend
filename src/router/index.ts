@@ -1,7 +1,7 @@
 /**
  * Author: Federico Engler
  *
- * The declaration of our routes.
+ * The declaration of the homepage routes.
  */
 import { h } from 'vue';
 import { createRouter, createWebHistory, RouterView } from 'vue-router';
