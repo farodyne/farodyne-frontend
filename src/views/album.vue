@@ -11,24 +11,26 @@
     import { BackendApi, settings } from '@/utils';
 
     @Component
-    export default class Navbar extends Vue {
-        album?: Album;
+    export default class PageAlbum extends Vue {
+        album!: Album;
 
+        // The "created" hook for this view.
         async created() {
             const { id } = this.$route.params;
 
             try {
                 this.album = await new BackendApi().getAlbum(id as string);
-                // console.log('AAAAAAAAA', JSON.stringify(this.album, null, 2));
             } catch (error) {
                 console.error(`Failed to get album "${id}" from server.`);
             }
         }
 
+        // Computed for the content base.
         get contentBase() {
             return settings.contentBase;
         }
 
+        // Computed for the max-with size of the album.
         get maxWidth() {
             return `max-width: ${this.album?.width}px;`;
         }
