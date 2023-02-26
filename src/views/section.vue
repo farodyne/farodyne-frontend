@@ -2,16 +2,18 @@
     /**
      * Author: Federico Engler
      *
-     * The component that implements the navigation bar in our application.
+     * The view used to display a particular section of the homepage. A section is for
+     * example the section of landscape photography, or the one for fantasy images.
      */
     import { Component, Vue } from 'vue-facing-decorator';
     import { Section } from '@/types';
     import { BackendApi, settings } from '@/utils';
 
     @Component
-    export default class Navbar extends Vue {
-        section?: Section;
+    export default class PageSection extends Vue {
+        section!: Section;
 
+        // The "created" hook for this view.
         async created() {
             const type = this.$route.path.substring(1);
 
@@ -22,6 +24,7 @@
             }
         }
 
+        // Computed for the backdrop image use in this section.
         get backdropUrl() {
             const type = this.$route.path.substring(1);
             return `${settings.contentBase}/backdrops/${type}.jpg`;
